@@ -1,0 +1,6 @@
+.env
+.dockerignore
+.envrc
+test_output.txt
+.venv
+.vscode
