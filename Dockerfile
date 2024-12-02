@@ -28,4 +28,4 @@ EXPOSE 8000
 
 ENTRYPOINT [ "poetry", "run" ]
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "$PORT"]
+CMD uvicorn app.main:app --host 0.0.0.0 --port $PORT
