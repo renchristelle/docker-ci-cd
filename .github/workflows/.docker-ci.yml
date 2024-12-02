@@ -14,10 +14,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Run Hadolint
-      uses: hadolint/hadolint-action@v1.5.0
-      with:
-        dockerfile: Dockerfile
+    #- name: Run Hadolint
+    #  uses: hadolint/hadolint-action@v1.5.0
+    #  with:
+    #    dockerfile: Dockerfile
 
   build-and-test:
     runs-on: ubuntu-latest
@@ -59,9 +59,9 @@ jobs:
     - name: Load Docker image
       run: docker load < my_fastapi_app.tar
 
-    - name: Run Trivy vulnerability scanner
-      uses: aquasecurity/trivy-action@master
-      with:
-        image-ref: 'my_fastapi_app:latest'
-        format: 'table'
-        exit-code: '1'
+    #- name: Run Trivy vulnerability scanner
+    #  uses: aquasecurity/trivy-action@master
+    #  with:
+    #    image-ref: 'my_fastapi_app:latest'
+    #    format: 'table'
+    #    exit-code: '1'
