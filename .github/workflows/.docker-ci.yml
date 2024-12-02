@@ -14,10 +14,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-  #  - name: Run Hadolint
-  #    uses: hadolint/hadolint-action@v1.5.0
-  #    with:
-   #     dockerfile: Dockerfile
+    - name: Run Hadolint
+      uses: hadolint/hadolint-action@v1.5.0
+      with:
+        dockerfile: Dockerfile
 
   build-and-test:
     runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download Docker image from artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: my_fastapi_app
 
