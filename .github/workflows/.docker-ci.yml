@@ -24,7 +24,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Build Docker image
       run: docker build -t my_fastapi_app .
@@ -42,7 +42,7 @@ jobs:
       run: docker save my_fastapi_app:latest > my_fastapi_app.tar
 
     - name: Upload Docker image as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: my_fastapi_app
         path: my_fastapi_app.tar
